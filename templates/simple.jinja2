@@ -6,6 +6,9 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script type = "text/javascript" >
+    function update(){
+
+    }
 $( document ).ready(function() {
       $("#text").keyup(function (e) {
             if (e.keyCode == 13) {
@@ -26,7 +29,7 @@ var ajaxTest  = $.ajax(
     t: $('input[name=t]').val() }
    ,   dataType: "json",   success: function(response)
   {
-      console.log(response);
+
   }
 });
 </script>
