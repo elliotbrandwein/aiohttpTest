@@ -1,9 +1,11 @@
-/**
- * Created by elliot on 6/27/16.
- */
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type = "text/javascript" >
 $( document ).ready(function() {
       $("#text").keyup(function (e) {
             if (e.keyCode == 13) {
@@ -20,10 +22,18 @@ $( document ).ready(function() {
 });
 var ajaxTest  = $.ajax(
 {
-   url: "http://www.omdbapi.com/?",   data: {
+   url: "/",   data: {
     t: $('input[name=t]').val() }
    ,   dataType: "json",   success: function(response)
   {
       console.log(response);
   }
 });
+</script>
+<body>
+<h1>Welcome to {{ name }}</h1>
+<input id = "text" type="text" onsubmit="Send()" />
+<input id="button" type="button" value="Send" />
+<div id="test"></div>
+</body>
+</html>
