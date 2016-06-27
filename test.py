@@ -24,6 +24,8 @@ async def handler(request):
     return response
 
 async def handlePost(request):
+    context = {'name': 'elliot'}
+    print(context)
     response = aiohttp_jinja2.render_template('simple.jinja2', request, context)
     response.headers['Content-Language'] = 'eng'
     return response
