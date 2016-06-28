@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import json
 
 import aiohttp
 import asyncio
@@ -25,10 +26,9 @@ async def handler(request):
 
 async def handle_post(request):
     x = await request.json()
-    print(x)
-    context=x
-    response = aiohttp_jinja2.render_template('simple.jinja2', request, context)
-    response.headers['Content-Language'] = 'eng'
+    response = web.Response()
+    response.text = json.dumps(x)
+    response.content_type = 'application/json'
     return response
 
 app = web.Application()

@@ -23,10 +23,10 @@ $( document ).ready(function()
                 data: JSON.stringify({name: input}),
                 success: function (response) {
                     console.log(response);
-                    $("#test").prepend('<p> hi there' + response.name + '</p>');
+                    $("#test").prepend('<p> hi there ' + response.name + '</p>');
                 },
-                error: function (response) {
-                    console.log('error');
+                error: function () {
+                    console.log('error')
                 }
             });
         }
