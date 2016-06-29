@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="script.js"></script>
+<body>
+<h1> test page </h1>
+<input id = "text" type="text" onsubmit="Send()" />
+<input id="button" type="button" value="Send" />
+<div id="test"></div>
+</body>
+</html>
+#!/usr/bin/python3
