@@ -18,12 +18,3 @@ $( document ).ready(function() {
         $( "#test" ).prepend("<p>"+input+"</p>");
     });
 });
-var ajaxTest  = $.ajax(
-{
-   url: "http://www.omdbapi.com/?",   data: {
-    t: $('input[name=t]').val() }
-   ,   dataType: "json",   success: function(response)
-  {
-      console.log(response);
-  }
-});
